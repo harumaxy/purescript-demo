@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "nwolverson.ide-purescript",
+    "nwolverson.language-purescript",
+    "dhall.dhall-lang",
+    "dhall.vscode-dhall-lsp-server"
+  ]
+}
