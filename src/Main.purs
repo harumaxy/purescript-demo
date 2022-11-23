@@ -3,8 +3,12 @@ module Main where
 import Prelude
 
 import Effect (Effect)
-import Effect.Console (log)
+import Effect.Console as Console
+import HTTPure as HTTPure
 
-main :: Effect Unit
-main = do
-  log "🍝"
+
+main :: HTTPure.ServerM
+main =
+  HTTPure.serve 8080 router $ Console.log "Server now up on port 8080"
+  where
+    router _ = HTTPure.ok "hello world!"
